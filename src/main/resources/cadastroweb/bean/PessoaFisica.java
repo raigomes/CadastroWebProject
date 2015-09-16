@@ -9,8 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import 
-
 @Entity
 @Table(name="PessoaFisica")
 public class PessoaFisica implements Serializable {		
@@ -21,8 +19,7 @@ public class PessoaFisica implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="ID")
 	private long id;
-	
-	
+		
 	@Column(name="nome")
 	private String nome;
 	
