@@ -3,15 +3,24 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Formulario</title>
-		<script type="text/javascript">
-			
+		<script type="text/javascript">						
+			function mostraPFForm() {
+				document.getElementById("pessoafisica").style.display = "block";
+				document.getElementById("pessoajuridica").style.display = "none";
+				document.getElementById("pj").checked = false;
+			}
+			function mostraPJForm() {
+				document.getElementById("pessoafisica").style.display = "none";
+				document.getElementById("pessoajuridica").style.display = "block";				
+				document.getElementById("pf").checked = false;
+			}
 		</script>
 	</head>
 	<body>
 		<h1>Formulario de Cadastro</h1>
 		
-		<input type="radio" name="pf"/> Pessoa Fisica     
-		<input type="radio" name="pj"/> Pessoa Juridica
+		<input type="radio" name="radio" id="pf" onclick="mostraPFForm()"/> Pessoa Fisica     
+		<input type="radio" name="radio" id="pj" onclick="mostraPJForm()"/> Pessoa Juridica
 		
 		<div id="pessoafisica" style="display:none">
 			<form action="adicionaUsuarioPF">
@@ -34,6 +43,5 @@
 			</form>
 		</div>
 		
-		<input type="submit" value="Gravar" />
 	</body>
 </html>
