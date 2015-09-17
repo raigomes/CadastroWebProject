@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Formulario</title>
+		<script type="text/javascript">						
+			function mostraPFForm() {
+				document.getElementById("pessoafisica").style.display = "block";
+				document.getElementById("pessoajuridica").style.display = "none";
+				document.getElementById("pj").checked = false;
+			}
+			function mostraPJForm() {
+				document.getElementById("pessoafisica").style.display = "none";
+				document.getElementById("pessoajuridica").style.display = "block";				
+				document.getElementById("pf").checked = false;
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Formulario de Cadastro</h1>
+		
+		<input type="radio" name="radio" id="pf" onclick="mostraPFForm()"/> Pessoa Fisica     
+		<input type="radio" name="radio" id="pj" onclick="mostraPJForm()"/> Pessoa Juridica
+		
+		<div id="pessoafisica" style="display:none">
+			<form action="adicionaUsuarioPF">
+				Nome: <input type="text" name="nome"/> <br>
+				CPF: <input type="text" name="cpf"/> <br>
+				Usuario: <input type="text" name="user"/> <br>
+				Senha: <input type="text" name="pass"/> <br>
+				
+				<input type="submit" value="Gravar" />
+			</form>
+		</div>
+		<div id="pessoajuridica" style="display:none">
+			<form action="adicionaUsuarioPJ">
+				Nome: <input type="text" name="nome"/> <br>
+				CNPJ: <input type="text" name="cnpj"/> <br>
+				Usuario: <input type="text" name="user"/> <br>
+				Senha: <input type="text" name="pass"/> <br>
+				
+				<input type="submit" value="Gravar" />
+			</form>
+		</div>
+		
+	</body>
+</html>
