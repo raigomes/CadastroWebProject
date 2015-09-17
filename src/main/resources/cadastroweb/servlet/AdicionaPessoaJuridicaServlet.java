@@ -47,7 +47,8 @@ public class AdicionaPessoaJuridicaServlet extends HttpServlet {
         out.println("Contato " + pj.getNome() + 
                 " adicionado com sucesso");
         out.println("<br>");
-        out.println("<a href='./login.html'>Login</a>");
+        out.println("<a href='./login.html'>Login </a>"); 
+        out.println("<a href='./formulario.html'>Novo Cadastro</a>");
         out.println("</body>");
         out.println("</html>");
     }

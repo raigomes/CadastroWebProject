@@ -3,14 +3,19 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Login</title>
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
 	</head>
 	<body>
-		<form action="login">
-			Usuario: <input type="text" name="user"/>
-			Senha: <input type="text" name="pass"/>
+		<form id="login_form" action="login" method="post">
+			<h1>Faça seu login:</h1>
+			
+			Usuario: <input type="text" name="user"/>   
+			Senha: <input type="password" name="pass"/>
 			<br>
-			<input type="radio" name="userType" value="pf">Pessoa Física</input>     
-			<input type="radio" name="userType" value="pj">Pessoa Juridica</input>
+			<input type="radio" name="userType" value="pf">Pessoa Física     
+			<input type="radio" name="userType" value="pj"/>Pessoa Juridica	<br>
+			<input type="submit" name="login"/>
+			
 		</form>
 	</body>
 </html>

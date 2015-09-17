@@ -3,43 +3,36 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Formulario</title>
-		<script type="text/javascript">						
-			function mostraPFForm() {
-				document.getElementById("pessoafisica").style.display = "block";
-				document.getElementById("pessoajuridica").style.display = "none";
-			}
-			function mostraPJForm() {
-				document.getElementById("pessoafisica").style.display = "none";
-				document.getElementById("pessoajuridica").style.display = "block";				
-			}
-		</script>
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<script type="text/javascript" src="./js/form.js" ></script>
 	</head>
 	<body>
-		<h1>Formulario de Cadastro</h1>
-		
-		<input type="radio" name="formType" id="pf" onclick="mostraPFForm()"/> Pessoa Fisica     
-		<input type="radio" name="formType" id="pj" onclick="mostraPJForm()"/> Pessoa Juridica
-		
-		<div id="pessoafisica" style="display:none">
-			<form action="adicionaUsuarioPF">
-				Nome: <input type="text" name="nome"/> <br>
-				CPF: <input type="text" name="cpf"/> <br>
-				Usuario: <input type="text" name="user"/> <br>
-				Senha: <input type="text" name="pass"/> <br>
-				
-				<input type="submit" value="Gravar" />
-			</form>
+		<div id="form_input">
+			<h1>Formulario de Cadastro</h1>
+			
+			<input type="radio" name="formType" id="pf" onclick="mostraPFForm()"/> Pessoa Fisica     
+			<input type="radio" name="formType" id="pj" onclick="mostraPJForm()"/> Pessoa Juridica
+			<br><br>
+			<div id="pessoafisica" class="form" style="display:none">
+				<form action="adicionaUsuarioPF" method="post">
+					Nome: <input type="text" name="nome"/> <br>
+					CPF:   <input type="text" name="cpf"/> <br>
+					User:  <input type="text" name="user"/> <br>
+					Senha: <input type="password" name="pass"/> <br>
+					<br>
+					<input type="submit" value="Gravar" />
+				</form>
+			</div>
+			<div id="pessoajuridica" class="form" style="display:none" method="post">
+				<form action="adicionaUsuarioPJ">
+					Nome: <input type="text" name="nome"/> <br>
+					CNPJ: <input type="text" name="cnpj"/> <br>
+					User: <input type="text" name="user"/> <br>
+					Senha: <input type="password" name="pass"/> <br>
+					<br>
+					<input type="submit" value="Gravar" />
+				</form>
+			</div>
 		</div>
-		<div id="pessoajuridica" style="display:none">
-			<form action="adicionaUsuarioPJ">
-				Nome: <input type="text" name="nome"/> <br>
-				CNPJ: <input type="text" name="cnpj"/> <br>
-				Usuario: <input type="text" name="user"/> <br>
-				Senha: <input type="text" name="pass"/> <br>
-				
-				<input type="submit" value="Gravar" />
-			</form>
-		</div>
-		
 	</body>
 </html>
