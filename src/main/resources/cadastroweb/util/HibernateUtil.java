@@ -9,7 +9,7 @@ public class HibernateUtil {
 	static {
 		try {
 			sessionFactory = new AnnotationConfiguration().
-			configure("livrariaweb/util/hibernate.cfg.xml")
+			configure("cadastroweb/util/hibernate.cfg.xml")
 			.buildSessionFactory();
 		} catch (Throwable ex) {
 			throw new ExceptionInInitializerError(ex);

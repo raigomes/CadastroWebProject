@@ -8,16 +8,21 @@ import org.hibernate.tool.hbm2ddl.SchemaExport;
 public class GeraTabela {
 
 	public static void main(String[] args) {
-		AnnotationConfiguration conf = new AnnotationConfiguration()
-				.configure("cadastroweb/util/hibernate.cfg.xml");
-		
-		conf.addAnnotatedClass(PessoaFisica.class);
-		conf.addAnnotatedClass(PessoaJuridica.class);
-		
-		SchemaExport sE = new SchemaExport(conf);
-		sE.create(true, true);
-		
-		System.out.println(" A Tabela " + PessoaFisica.class.getName() + " foi criada.");
-		System.out.println(" A Tabela " + PessoaJuridica.class.getName() + " foi criada.");
+		try {
+			AnnotationConfiguration conf = new AnnotationConfiguration()
+					.configure("cadastroweb/util/hibernate.cfg.xml");
+			
+			conf.addAnnotatedClass(PessoaFisica.class);
+			conf.addAnnotatedClass(PessoaJuridica.class);
+			
+			SchemaExport sE = new SchemaExport(conf);
+			sE.create(true, true);
+			
+			System.out.println(" A Tabela " + PessoaFisica.class.getName() + " foi criada.");
+			System.out.println(" A Tabela " + PessoaJuridica.class.getName() + " foi criada.");
+		}
+		catch(Exception e) {
+			e.printStackTrace();		
+		}
 	}
 }

@@ -18,6 +18,7 @@ public class AdicionaPessoaFisicaServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
                         
@@ -29,22 +30,21 @@ public class AdicionaPessoaFisicaServlet extends HttpServlet {
         String usuario = request.getParameter("user");
         String senha = request.getParameter("pass");
         
-        // monta um objeto contato
+        // monta um objeto PessoaFisica
         PessoaFisica pf = new PessoaFisica();
         pf.setNome(nome);
         pf.setCpf(cpf);
         pf.setUser(usuario);
         pf.setPass(senha);
         
-        // salva o contato
+        // salva o usuario
         CadastroDao dao = new CadastroDaoImpl();
         dao.cadastra(pf);
         
-        // imprime o nome do contato que foi adicionado
+        // imprime o nome do usuario que foi adicionado
         out.println("<html>");
         out.println("<body>");
-        out.println("Contato " + pf.getNome() + 
-                " adicionado com sucesso");
+        out.println("Contato " + pf.getNome() + " adicionado com sucesso");
         out.println("<br>");
         out.println("<a href='./login.html'>Login</a>");
         out.println("</body>");

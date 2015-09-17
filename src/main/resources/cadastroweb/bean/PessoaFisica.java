@@ -26,10 +26,10 @@ public class PessoaFisica implements Serializable {
 	@Column(name="cpf")
 	private String cpf;
 	
-	@Column(name="user")
+	@Column(name="usuario")
 	private String user;
 	
-	@Column(name="pass")
+	@Column(name="senha")
 	private String pass;
 	
 	

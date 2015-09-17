@@ -26,10 +26,10 @@ public class PessoaJuridica implements Serializable {
 	@Column(name="cnpj")
 	private String cnpj;
 	
-	@Column(name="user")
+	@Column(name="usuario")
 	private String user;
 	
-	@Column(name="pass")
+	@Column(name="senha")
 	private String pass;
 	
 	

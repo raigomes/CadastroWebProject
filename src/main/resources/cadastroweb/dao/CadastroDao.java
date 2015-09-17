@@ -1,10 +1,10 @@
 package cadastroweb.dao;
 
-//import cadastroweb.bean.PessoaFisica;
-//import cadastroweb.bean.PessoaJuridica;
+import cadastroweb.bean.PessoaFisica;
+import cadastroweb.bean.PessoaJuridica;
 
 public interface CadastroDao {
 	public boolean cadastra(Object usuario);
-	//public boolean cadastra(PessoaJuridica usuario);
-	public boolean login(String user, String pass, boolean userType);
+	public PessoaFisica loginPF(String user, String pass);
+	public PessoaJuridica loginPJ(String user, String pass);
 }
