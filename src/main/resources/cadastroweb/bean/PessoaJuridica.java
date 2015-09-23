@@ -26,10 +26,17 @@ public class PessoaJuridica implements Serializable {
 	@Column(name="cnpj")
 	private String cnpj;
 	
+<<<<<<< HEAD
 	@Column(name="usuario")
 	private String user;
 	
 	@Column(name="senha")
+=======
+	@Column(name="user")
+	private String user;
+	
+	@Column(name="pass")
+>>>>>>> branch 'master' of https://github.com/raigomes/CadastroWebProject.git
 	private String pass;
 	
 	

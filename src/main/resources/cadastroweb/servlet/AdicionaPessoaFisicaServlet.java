@@ -18,6 +18,7 @@ public class AdicionaPessoaFisicaServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	
+<<<<<<< HEAD
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
@@ -48,6 +49,37 @@ public class AdicionaPessoaFisicaServlet extends HttpServlet {
         out.println("<br>");
         out.println("<a href='./login.html'>Login</a> ");
         out.println("<a href='./formulario.html'>Novo Cadastro</a>");
+=======
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
+                        
+        PrintWriter out = response.getWriter();
+                        
+        // pegando os parâmetros do request
+        String nome = request.getParameter("nome");
+        String cpf = request.getParameter("cpf");
+        String usuario = request.getParameter("user");
+        String senha = request.getParameter("pass");
+        
+        // monta um objeto contato
+        PessoaFisica pf = new PessoaFisica();
+        pf.setNome(nome);
+        pf.setCpf(cpf);
+        pf.setUser(usuario);
+        pf.setPass(senha);
+        
+        // salva o contato
+        CadastroDao dao = new CadastroDaoImpl();
+        dao.cadastra(pf);
+        
+        // imprime o nome do contato que foi adicionado
+        out.println("<html>");
+        out.println("<body>");
+        out.println("Contato " + pf.getNome() + 
+                " adicionado com sucesso");
+        out.println("<br>");
+        out.println("<a href='./login.html'>Login</a>");
+>>>>>>> branch 'master' of https://github.com/raigomes/CadastroWebProject.git
         out.println("</body>");
         out.println("</html>");
     }

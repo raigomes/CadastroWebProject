@@ -9,7 +9,11 @@ public class HibernateUtil {
 	static {
 		try {
 			sessionFactory = new AnnotationConfiguration().
+<<<<<<< HEAD
 			configure("cadastroweb/util/hibernate.cfg.xml")
+=======
+			configure("livrariaweb/util/hibernate.cfg.xml")
+>>>>>>> branch 'master' of https://github.com/raigomes/CadastroWebProject.git
 			.buildSessionFactory();
 		} catch (Throwable ex) {
 			throw new ExceptionInInitializerError(ex);

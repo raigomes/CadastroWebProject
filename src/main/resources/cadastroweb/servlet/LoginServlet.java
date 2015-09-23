@@ -1,5 +1,6 @@
 package cadastroweb.servlet;
 
+<<<<<<< HEAD
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
@@ -128,4 +129,12 @@ public class LoginServlet extends HttpServlet {
     	out.println("</html>");
 	}
 	
+=======
+import javax.servlet.http.HttpServlet;
+
+public class LoginServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
+>>>>>>> branch 'master' of https://github.com/raigomes/CadastroWebProject.git
 }
